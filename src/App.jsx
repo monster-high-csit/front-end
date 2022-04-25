@@ -1,27 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+
+import AdminPage from './pages/Admin/Admin';
+import AdminPageContent from './pages/Admin/AdminContent/AdminContent';
+import AdminFilmEditContent from './pages/AdminFilmEdit/AdminFilmEditContent';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          <code>src/App.js</code>
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route index element={<p>Main Page</p>} />
+      <Route path="admin" element={<AdminPage />}>
+        <Route path="film-creation" element={<AdminPageContent />} />
+        <Route path="film-edit" element={<AdminFilmEditContent />} />
+      </Route>
+    </Routes>
   );
 }
 

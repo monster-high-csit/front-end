@@ -1,0 +1,10 @@
+@import '../../styles/variables.scss';
+
+.film-edit {
+    & .film-edit__selector-label {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+    }
+}

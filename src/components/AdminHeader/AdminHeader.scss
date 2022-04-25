@@ -1,0 +1,48 @@
+@import '../../styles/variables.scss';
+
+.header-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    width: 40%;
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $default-button-color;
+
+        width: 145px;
+        height: 55px;
+
+        &-placeholder {
+            color: $default-button-text-color;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+
+        width: 50%;
+    }
+
+    .button {
+        display: block;
+        border-radius: 8px;
+        padding: 8px 16px;
+
+        background-color: #CFCFCF;
+        white-space: nowrap;
+        color: black;
+        text-decoration: none;
+        transition: .15s ease-in-out;
+    }
+
+    .button:hover {
+        background-color: $default-button-color;
+        color: $default-button-text-color;
+    }
+}
