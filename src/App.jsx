@@ -5,6 +5,15 @@ import AdminPage from './pages/Admin/Admin';
 import AdminPageContent from './pages/Admin/AdminContent/AdminContent';
 import AdminFilmEditContent from './pages/AdminFilmEdit/AdminFilmEditContent';
 
+import MainPage from './components/mainPage/MainPage';
+
+// export function AddLibrary(urlOfTheLibrary) {
+//   const script = document.createElement('script');
+//   script.src = urlOfTheLibrary;
+//   script.async = true;
+//   document.body.appendChild(script);
+// }
+
 function App() {
   return (
     <Routes>
