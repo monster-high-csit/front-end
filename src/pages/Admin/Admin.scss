@@ -1,0 +1,9 @@
+@import "../../styles/variables.scss";
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    padding: 48px 64px;
+
+    width: 100vw;
+}

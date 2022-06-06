@@ -1,0 +1,14 @@
+@import '../../styles/variables.scss';
+
+.general-button {
+    outline: none;
+    border: 0;
+
+    background-color: $button-background;
+    color: $default-button-text-color;
+    border-radius: $button-br;
+    font-size: 1.25rem;
+    width: 200px;
+    padding: 8px 16px;
+    margin-top: 20px;
+}
