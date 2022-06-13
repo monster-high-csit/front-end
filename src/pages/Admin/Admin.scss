@@ -1,4 +1,8 @@
-@import "../../styles/variables.scss";
+@import "../../style/variables.scss";
+
+body {
+    overflow: scroll;
+}
 
 .page-container {
     display: flex;

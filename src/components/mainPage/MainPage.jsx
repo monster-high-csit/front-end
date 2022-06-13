@@ -7,7 +7,7 @@ import { Mousewheel, FreeMode, Parallax } from 'swiper';
 import RegistrationModal from '../registrationModal/RegistrationModal';
 import LoginModal from '../loginModal/LoginModal';
 
-import './mainPage.css';
+import './mainPage.scss';
 // eslint-disable-next-line import/no-unresolved
 import 'swiper/css';
 
@@ -127,7 +127,7 @@ function MainPage() {
   };
 
   return (
-    <>
+    <div className="container">
       <RegistrationModal
         registrationActive={registrationActive}
         setRegistrationActive={setRegistrationActive}
@@ -216,10 +216,10 @@ function MainPage() {
               </div>
             </SwiperSlide>
           ))}
-          <SwiperSlide className="Swiper_item" />
+          {/* <SwiperSlide className="Swiper_item" /> */}
         </Swiper>
       </div>
-    </>
+    </div>
   );
 }
 
