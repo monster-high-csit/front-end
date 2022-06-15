@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import AdminPage from './pages/Admin/Admin';
 import AdminPageContent from './pages/Admin/AdminContent/AdminContent';
 import AdminFilmEditContent from './pages/AdminFilmEdit/AdminFilmEditContent';
+import FilmDetailsPage from './pages/FilmDetails/FilmDetailsPage';
 
 import MainPage from './components/mainPage/MainPage';
 
@@ -15,6 +16,7 @@ function App() {
         <Route path="film-creation" element={<AdminPageContent />} />
         <Route path="film-edit" element={<AdminFilmEditContent />} />
       </Route>
+      <Route path="film/:id" element={<FilmDetailsPage />} />
     </Routes>
   );
 }

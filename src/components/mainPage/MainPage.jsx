@@ -12,86 +12,17 @@ import './mainPage.scss';
 import 'swiper/css';
 
 import goFilms from '../../resources/img/go_films.svg';
-import one from '../../resources/img/1.jpg';
-import two from '../../resources/img/2.jpg';
-import three from '../../resources/img/3.jpg';
-import four from '../../resources/img/4.jpg';
-import five from '../../resources/img/5.jpg';
-import six from '../../resources/img/6.jpg';
-import seven from '../../resources/img/7.jpg';
-import eight from '../../resources/img/8.jpg';
-import nine from '../../resources/img/9.jpg';
+import FilmDetailsModal from '../filmDetailsModal/FilmDetailsModal';
+import { films } from '../../constants';
 
 function MainPage() {
   const pageHeight = window.innerHeight;
 
   const [registrationActive, setRegistrationActive] = useState(false);
   const [loginActive, setLoginActive] = useState(false);
-  const [slides, setSlides] = useState([
-    {
-      id: 1,
-      src: one,
-      age: '16+',
-      name: 'Название фильма 1',
-      selected: false,
-    },
-    {
-      id: 2,
-      src: two,
-      age: '16+',
-      name: 'Название фильма 2',
-      selected: false,
-    },
-    {
-      id: 3,
-      src: three,
-      age: '12+',
-      name: 'Название фильма 3',
-      selected: false,
-    },
-    {
-      id: 4,
-      src: four,
-      age: '18+',
-      name: 'Название фильма 4',
-      selected: false,
-    },
-    {
-      id: 5,
-      src: five,
-      age: '12+',
-      name: 'Название фильма 5',
-      selected: false,
-    },
-    {
-      id: 6,
-      src: six,
-      age: '16+',
-      name: 'Название фильма 6',
-      selected: false,
-    },
-    {
-      id: 7,
-      src: seven,
-      age: '18+',
-      name: 'Название фильма 7',
-      selected: false,
-    },
-    {
-      id: 8,
-      src: eight,
-      age: '6+',
-      name: 'Название фильма 8',
-      selected: false,
-    },
-    {
-      id: 9,
-      src: nine,
-      age: '12+',
-      name: 'Название фильма 9',
-      selected: false,
-    },
-  ]);
+  const [slides, setSlides] = useState(films);
+  const [detailsActive, setDetailsActive] = useState(false);
+  const [selectedFilm, setSelectedFilm] = useState(slides[0]);
 
   useEffect(() => {
   }, [slides]);
@@ -104,6 +35,12 @@ function MainPage() {
       newArr = slides.map((item) => {
         return {
           id: item.id,
+          imdb: item.imdb,
+          mainRoles: item.mainRoles,
+          desc: item.desc,
+          directors: item.directors,
+          genres: item.genres,
+          timeLength: item.timeLength,
           src: item.src,
           age: item.age,
           name: item.name,
@@ -115,6 +52,12 @@ function MainPage() {
       newArr = slides.map((item) => {
         return {
           id: item.id,
+          imdb: item.imdb,
+          mainRoles: item.mainRoles,
+          desc: item.desc,
+          directors: item.directors,
+          genres: item.genres,
+          timeLength: item.timeLength,
           src: item.src,
           age: item.age,
           name: item.name,
@@ -135,6 +78,11 @@ function MainPage() {
       <LoginModal
         loginActive={loginActive}
         setLoginActive={setLoginActive}
+      />
+      <FilmDetailsModal
+        filmDetails={selectedFilm}
+        modalActive={detailsActive}
+        setModalActive={setDetailsActive}
       />
       <div className="main_page">
         <div className="main_page__header">
@@ -210,7 +158,14 @@ function MainPage() {
               <div className={elem.selected === false ? 'Swiper_item_info' : 'Swiper_item_info Swiper_active_item_info'}>
                 <h3>{elem.name}</h3>
                 <p className="age_control">{elem.age}</p>
-                <div className="check_film">
+                <div
+                  className="check_film"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setDetailsActive(true);
+                    setSelectedFilm(elem);
+                  }}
+                >
                   <p>Подробнее</p>
                 </div>
               </div>

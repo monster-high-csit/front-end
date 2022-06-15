@@ -1,0 +1,43 @@
+@import '../../style/variables.scss';
+
+hr {
+    width: 96vw;
+    margin-top: 50px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 15px;
+}
+
+.footer p {
+    color: white;
+}
+
+.footer__logo-title {
+    font-size: 5vh;
+
+    background: linear-gradient(10deg, #8F00FF 40%, #FF5E03 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    padding-left: 2vw;
+}
+
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 2vw;
+}
+
+.footer__socials {
+    display: flex;
+}
+
+.footer__socials-icon {
+    width: 35px;
+    height: 25px;
+}

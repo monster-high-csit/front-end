@@ -1,0 +1,55 @@
+@import '../../style/variables.scss';
+
+.schedule-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+
+    width: 250px;
+    height: 180px;
+
+    background-color: white;
+    border-radius: 15px;
+
+    margin-bottom: 35px;
+    cursor: pointer;
+
+    transition: .1s ease-in-out;
+}
+
+.schedule-item h2,p {
+    color: black;
+}
+
+.schedule-item:hover {
+    background-color: #A802C3;
+}
+
+.schedule-item:hover h2,p {
+    color: white;
+}
+
+.schedule-item:hover .schedule-item__hall {
+    color: white;
+}
+
+.schedule-item:hover .schedule-item__price {
+    color: white;
+}
+
+.schedule-item__time {
+    margin-top: 10%;
+    margin-bottom: 0;
+}
+
+.schedule-item__hall {
+    font-size: 1.75rem;
+    color: black;
+}
+
+.schedule-item__price {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #A802C3;
+}

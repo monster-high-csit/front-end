@@ -1,0 +1,306 @@
+@import '../../style/variables.scss';
+
+.container h2 {
+    font-size: 3rem;
+}
+
+.film__main {
+    background: radial-gradient(160.57% 160.57% at 99.22% 95.6%, rgba(36, 9, 38, 0.2) 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(76.56% 172.25% at 96.8% 118.43%, rgba(0, 0, 0, 0.2) 0%, rgba(15, 13, 151, 0) 100%), radial-gradient(174.6% 283.15% at 27.53% 17.97%, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(94.4% 160.7% at 53.6% 5.6%, rgba(219, 0, 255, 0.38) 0%, rgba(132, 26, 149, 0.376042) 99.99%, rgba(63, 0, 85, 0) 100%);
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.film {
+    background: url(../../resources/img/main_bg.png) 70% 35% no-repeat;
+    background-size: 102%;
+    height: 100vh;
+
+    color: aliceblue;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.film__header {
+    user-select: none;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.film__logo {
+    font-size: 5vh;
+
+    background: linear-gradient(10deg, #8F00FF 40%, #FF5E03 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    padding-left: 2vw;
+}
+
+.film__authorization {
+    display: flex;
+    padding-right: 2vw;
+}
+
+.authorization_item {
+    background-color: rgb(182, 65, 225);
+    padding: 7px 20px;
+
+    border: rgb(182, 65, 225) solid 3px;
+    border-radius: 5px;
+
+    margin: auto 10px;
+}
+
+.authorization_item > p,a {
+    text-decoration: none;
+    color: white;
+}
+
+.authorization_item:hover {
+    cursor: pointer;
+
+    background-color: rgb(137, 13, 182);
+    border: rgb(137, 13, 182) solid 3px;
+    transition: 0.1s;
+}
+
+.film__button {
+    padding-left: 100px;
+}
+
+.go_films {
+    width: 50px;
+    height: 50px;
+}
+
+.film__button {
+    margin: 0 auto;
+    padding: 1.2%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.film__button p {
+    font-size: 14px;
+    padding-top: 3px;
+    user-select: none;
+    color: white;
+}
+
+.go_films {
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.go_films:hover {
+    cursor: pointer;
+}
+
+.film__content button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    /* отображаем курсор в виде руки при наведении; некоторые
+    считают, что необходимо оставлять стрелочный вид для кнопок */
+    cursor: pointer;
+}
+
+.details {
+    z-index: 3;
+}
+
+.film__content.details {
+    position: relative;
+    background: linear-gradient(159.39deg, #200000 11.66%, rgba(32, 0, 0, 0) 118.9%), #E06AF3;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 95vw;
+    height: 95vh;
+
+    padding: 10px;
+}
+
+.film__close-button {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+
+    align-self: flex-end;
+}
+
+.film__inner-content {
+    width: 100vw;
+    height: 65vh;
+
+    display: flex;
+    padding: 0 2vw;
+    padding-right: 0;
+}
+
+.film__inner-content p,h2 {
+    color: white;
+    font-size: 20px;
+}
+
+.film__film-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;
+
+    height: 100%;
+    width: 45vw;
+}
+
+.film__film-desc {
+    margin-bottom: 36px;
+}
+
+.film__film-genres {
+    margin-bottom: 36px;
+}
+
+.film__film-directors {
+    margin-bottom: 36px;
+}
+
+.film__film-main-roles {
+    margin-bottom: 36px;
+}
+
+.film__film-title {
+    margin: 0;
+    margin-bottom: 36px;
+}
+
+.film__film-reqs {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 24px;
+}
+
+.film__content p {
+    font-size: 20px;
+    color: white;
+}
+
+.film__poster {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+.login_wrapper {
+    margin: auto;
+}
+
+.login_title {
+    text-align: center;
+    font-size: 3.5vh;
+}
+
+.login_inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.film_input__item:focus {
+    outline: none;
+}
+
+.film_input__item {
+    padding: 1.1vh;
+    margin: 1.5vh 10px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+
+    border: 2px solid #A802C3;
+}
+
+.login__input {
+    padding: 1.5vh;
+    width: 25vw;
+}
+
+.button__login {
+    margin-top: 2vh;
+    padding: 1.2vh 1vw;
+}
+
+.film__schedule-title {
+    font-size: 3rem;
+    margin-top: 45px;
+    padding-left: 2vw;
+}
+
+.film__filters {
+    padding-left: 2vw;
+    width: 300px;
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.film__filters-3d-title {
+    background-color: white;
+    color: black;
+    padding: 8px 16px;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: .1s ease-in-out;
+}
+
+.film__filters-3d-title:hover {
+    background-color: #A802C3;
+    color: white;
+}
+
+.film__filters-date {
+    background-color: white;
+    color: black;
+    padding: 8px 16px;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: .1s ease-in-out;
+}
+
+.film__filters-date:hover {
+    background-color: #A802C3;
+    color: white;
+}
+
+.film__schedule {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 0 2vw;
+    margin-top: 35px;
+}
